@@ -1,0 +1,75 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "es6": true,
+        "node": true,
+        "jest" : true,
+        "browser": true
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "16.0"
+        }
+    },
+    "plugins": [
+        "react"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "rules": {
+        "jsx-quotes":[
+            "error",
+            "prefer-double"
+        ],
+        "object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "react/prop-types": [
+            "error"
+        ],
+        "no-console":"off",
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "comma-spacing": [
+          "error",
+          {
+            "before": false,
+            "after": true
+          }
+        ],
+        "no-trailing-spaces": [
+          "error"
+        ],
+        "space-before-blocks": [
+          "error"
+        ],
+        "padded-blocks": [
+          "error",
+          {
+            "classes": "always",
+            "blocks": "never",
+            "switches": "never"
+          }
+        ],
+        "import/prefer-default-export": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    }
+}
