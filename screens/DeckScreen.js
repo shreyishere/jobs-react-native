@@ -2,7 +2,7 @@ import React from 'react';
 import { MapView } from 'expo';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 import { Card, Button, Icon } from 'react-native-elements';
 
 import * as actions from '../actions';
@@ -69,7 +69,7 @@ class DeckScreen extends React.Component {
 
   render() {
     return (
-      <View style={{ marginTop: 10 }}>
+      <SafeAreaView style={{ marginTop: 10 }}>
         <Swipe
           data={this.props.jobs}
           renderCard={this._renderCard}
@@ -77,7 +77,7 @@ class DeckScreen extends React.Component {
           onSwipeRight={job => this.props.likJob(job)}
           renderNoMoreCards={this._renderNoMoreCard}
         />
-      </View>
+      </SafeAreaView>
     );
   }
 
